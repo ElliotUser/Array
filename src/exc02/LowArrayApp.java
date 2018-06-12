@@ -5,7 +5,7 @@ public class LowArrayApp {
         LowArray arr  = new LowArray(15);
         int nElems = 0;
         int j;
-
+//-----------------------------------------------------
         arr.setElem(0,10);
         arr.setElem(1,20);
         arr.setElem(2,55);
