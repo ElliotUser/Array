@@ -39,7 +39,7 @@ public class OrdArray {
             if (a[j] == value)
                 break;
         }
-        for (int k = j; k > j ; k--) {              //Перемещение последующих элементов
+        for (int k = nElems; k > j ; k--) {              //Перемещение последующих элементов
             a[k] = a[k-1];
         }
         a[j] = value;                               //Вставка
