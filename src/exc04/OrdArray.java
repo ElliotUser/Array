@@ -6,6 +6,8 @@ public class OrdArray {
     private int nElems;
 
     public OrdArray(int max) {
+        a = new long[max];
+        nElems = 0;
     }
 
     public int size(){
@@ -35,13 +37,11 @@ public class OrdArray {
 
     public void insert(long value){                 //Вставка элемента в массив
         int j;
-        for ( j = 0; j < nElems; j++) {             //Определение позиции вставки(линейный поиск)
-            if (a[j] == value)
+        for ( j = 0; j < nElems; j++)               //Определение позиции вставки(линейный поиск)
+            if (a[j] > value)
                 break;
-        }
-        for (int k = nElems; k > j ; k--) {              //Перемещение последующих элементов
+        for (int k = nElems; k > j ; k--)             //Перемещение последующих элементов
             a[k] = a[k-1];
-        }
         a[j] = value;                               //Вставка
         nElems++;                                   //Увеличение размера
     }
